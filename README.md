@@ -28,3 +28,20 @@ Caching with tests
     npx nx serve angular-integrated-workspace
 
     npx nx build angular-integrated-workspace
+
+## @nx/angular plugin
+
+    nx g @nx/angular:app appName
+
+    nx g @nx/angular:lib libName
+
+    nx <target-name> <project-name>
+
+
+## Example
+
+    nx lint angular-integrated-workspace
+
+is the same as
+
+    nx run angular-integrated-workspace:lint
