@@ -1,33 +1,26 @@
 {
-  "$schema": "node_modules/nx/schemas/project-schema.json",
-  "name": "my-project",
+  "name": "angular-integrated-workspace",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "generators": {
-    "@schematics/angular:component": {
-      "style": "scss"
-    }
-  },
-  "sourceRoot": "src",
-  "prefix": "app",
+  "prefix": "angular-integrated-workspace",
+  "sourceRoot": "apps/angular-integrated-workspace/src",
+  "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
+      "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/my-project",
-        "index": "src/index.html",
-        "browser": "src/main.ts",
-        "polyfills": [
-          "zone.js"
-        ],
-        "tsConfig": "tsconfig.app.json",
+        "outputPath": "dist/apps/angular-integrated-workspace",
+        "index": "apps/angular-integrated-workspace/src/index.html",
+        "browser": "apps/angular-integrated-workspace/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/angular-integrated-workspace/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "src/favicon.ico",
-          "src/assets"
+          "apps/angular-integrated-workspace/src/favicon.ico",
+          "apps/angular-integrated-workspace/src/assets"
         ],
-        "styles": [
-          "src/styles.scss"
-        ],
+        "styles": ["apps/angular-integrated-workspace/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -58,10 +51,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "my-project:build:production"
+          "buildTarget": "angular-integrated-workspace:build:production"
         },
         "development": {
-          "buildTarget": "my-project:build:development"
+          "buildTarget": "angular-integrated-workspace:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -69,26 +62,14 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "my-project:build"
+        "buildTarget": "angular-integrated-workspace:build"
       }
     },
-    "test": {
-      "executor": "@angular-devkit/build-angular:karma",
+    "serve-static": {
+      "executor": "@nx/web:file-server",
       "options": {
-        "polyfills": [
-          "zone.js",
-          "zone.js/testing"
-        ],
-        "tsConfig": "tsconfig.spec.json",
-        "inlineStyleLanguage": "scss",
-        "assets": [
-          "src/favicon.ico",
-          "src/assets"
-        ],
-        "styles": [
-          "src/styles.scss"
-        ],
-        "scripts": []
+        "buildTarget": "angular-integrated-workspace:build",
+        "staticFilePath": "dist/apps/angular-integrated-workspace/browser"
       }
     }
   }
