@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "npx nx serve angular-integrated-workspace",
+    "start": "nx serve angular-integrated-workspace --configuration=development",
     "e2e-watch": "npx nx run angular-integrated-workspace-e2e:e2e --watch --skip-nx-cache"
   },
   "private": true,

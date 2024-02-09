@@ -35,7 +35,7 @@ Caching with tests
 
     nx g @nx/angular:lib libName
 
-    nx <target-name> <project-name>
+    nx <target-name> <project-name> <overwrite params>
 
 
 ## Example
