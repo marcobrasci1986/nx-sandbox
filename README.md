@@ -45,3 +45,8 @@ Caching with tests
 is the same as
 
     nx run angular-integrated-workspace:lint
+
+
+# Libraries
+
+![types-of-libraries.png](..%2F..%2F..%2FDesktop%2FScreenshots%2Ftypes-of-libraries.png)
