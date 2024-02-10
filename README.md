@@ -48,5 +48,6 @@ is the same as
 
 
 # Libraries
+![types-of-libraries.png](assets%2Ftypes-of-libraries.png)
 
-![types-of-libraries.png](..%2F..%2F..%2FDesktop%2FScreenshots%2Ftypes-of-libraries.png)
+![example-architecture.png](assets%2Fexample-architecture.png)
