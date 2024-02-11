@@ -55,3 +55,5 @@ is the same as
 ## Creating libraries
 
     nx g @nx/angular:lib pipe --directory=shared --dry-run
+
+    nx g @nx/angular:lib pipes --directory=shared/core --dry-run
